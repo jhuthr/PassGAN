@@ -76,10 +76,10 @@ def parse_args():
 def getmaps(args):
 
     with open(os.path.join(args.input_dir, 'charmap.pickle'), 'rb') as f:
-        charmap = pickle.load(f)
+        charmap = pickle.load(f, encoding='latin1')
 
     with open(os.path.join(args.input_dir, 'inv_charmap.pickle'), 'rb') as f:
-        inv_charmap = pickle.load(f)
+        inv_charmap = pickle.load(f, encoding='latin1')
 
     return charmap, inv_charmap
 
